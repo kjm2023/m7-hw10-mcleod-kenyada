@@ -21,7 +21,7 @@ var textarea = document.querySelector('textarea')
 
 window.addEventListener("load", () => {
   let userName = document.cookie;
-  if(userName != null){
+  if(userName != undefined){
     let stringSplit = userName.split('=');
     if(stringSplit[0] === "name"){
       nameSpan.innerText = stringSplit[1];
