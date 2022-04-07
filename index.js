@@ -22,8 +22,10 @@ var textarea = document.querySelector('textarea')
 window.addEventListener("load", () => {
   let userName = document.cookie;
   let stringSplit = userName.split('=');
-  if(stringSplit[0] == "name"){
+  if(stringSplit[0] === "name"){
     nameSpan.innerText = stringSplit[1];
+  } else {
+    nameSpan.innerText = "Your Name";
   }
 
   if(localStorage.getItem("note") != null) {
