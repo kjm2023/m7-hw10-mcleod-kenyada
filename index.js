@@ -21,18 +21,20 @@ var textarea = document.querySelector('textarea')
 
 window.addEventListener("load", () => {
   let userName = document.cookie;
-  let stringSplit = userName.split('=');
-  if(stringSplit[0] === "name"){
-    nameSpan.innerText = stringSplit[1];
-  } else {
-    nameSpan.innerText = "Your Name";
+  if(userName != null){
+    let stringSplit = userName.split('=');
+    if(stringSplit[0] === "name"){
+      nameSpan.innerText = stringSplit[1];
+    } else {
+      nameSpan.innerText = "Your Name";
+    }
   }
 
-  if(localStorage.getItem("note") != null) {
-    let thisNote = localStorage.getItem("note");
-    let pureText = thisNote.split('"');
-    textarea.value = pureText[1];
-  }
+    if(localStorage.getItem("note") != null) {
+      let thisNote = localStorage.getItem("note");
+      let pureText = thisNote.split('"');
+      textarea.value = pureText[1];
+    }
   
 });
 
