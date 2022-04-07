@@ -22,7 +22,9 @@ var textarea = document.querySelector('textarea')
 window.addEventListener("load", () => {
   let userName = document.cookie;
   let stringSplit = userName.split('=');
-  nameSpan.innerText = stringSplit[1];
+  if(stringSplit[0] == "name"){
+    nameSpan.innerText = stringSplit[1];
+  }
 
   if(localStorage.getItem("note") != null) {
     let thisNote = localStorage.getItem("note");
