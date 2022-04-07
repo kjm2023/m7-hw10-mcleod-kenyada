@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Web Personalization</title>
+</head>
+<body>
+  <header>
+    <h1><span contenteditable>Your Name</span>'s Notes</h1>
+  </header>
+  <main>
+    <form>
+      <label for="notes-area">Write your notes below!</label>
+      <textarea name="notes" id="notes-area"></textarea>
+      <div class="buttons">
+        <button id="save" type="submit">Save</button>
+        <button id="clear" type="button">Clear</button>
+      </div>
+    </form>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
